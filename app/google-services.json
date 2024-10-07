@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "974430471759",
+    "project_id": "moviles-8ceaf",
+    "storage_bucket": "moviles-8ceaf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974430471759:android:2337d9446c42e7b65c8c3a",
+        "android_client_info": {
+          "package_name": "com.example.moviles"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1zi7VbXFh-Wrk0kqvAeDoRuw-aOfP1hw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
