@@ -10,9 +10,9 @@ class AuthRepository {
         firebaseAuth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    callback(firebaseAuth.currentUser, null)
+                    callback(firebaseAuth.currentUser, null) // Usuario logueado correctamente
                 } else {
-                    callback(null, task.exception?.message)
+                    callback(null, task.exception?.message) // Error
                 }
             }
     }
@@ -21,10 +21,11 @@ class AuthRepository {
         firebaseAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    callback(firebaseAuth.currentUser, null)
+                    callback(firebaseAuth.currentUser, null) // Usuario registrado correctamente
                 } else {
-                    callback(null, task.exception?.message)
+                    callback(null, task.exception?.message) // Error
                 }
             }
     }
 }
+

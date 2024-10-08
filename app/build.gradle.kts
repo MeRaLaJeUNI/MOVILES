@@ -1,5 +1,3 @@
-
-
 plugins {
     id("com.android.application")
     id("com.google.gms.google-services")
@@ -10,7 +8,6 @@ android {
     namespace = "com.example.moviles"
     compileSdk = 34
 
-
     defaultConfig {
         applicationId = "com.example.moviles"
         minSdk = 24
@@ -19,7 +16,6 @@ android {
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
 
     buildTypes {
         release {
@@ -53,24 +49,28 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
-
 }
 
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
+    implementation(platform(libs.androidx.compose.bom)) // Asegúrate de que el BOM esté definido en tu build.gradle de nivel superior
     implementation(libs.androidx.material3)
     implementation(libs.androidx.appcompat)
+    implementation("androidx.compose.ui:ui-tooling:1.5.1")
+    implementation(libs.androidx.ui.tooling.preview.android)
+    debugImplementation("androidx.compose.ui:ui-tooling-debug:1.5.1")
 
     // Firebase
     implementation(platform("com.google.firebase:firebase-bom:33.4.0"))
-    implementation("com.google.firebase:firebase-analytics")
-    implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.firebase:firebase-auth")
-    implementation("com.google.android.material:material:1.10.0")
+
+    // Dependencias de Jetpack Compose
+    implementation("androidx.compose.ui:ui:1.5.1")
+    implementation("androidx.compose.material3:material3:1.3.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.0")
+    implementation(libs.androidx.runtime.livedata)
 }
+
+
